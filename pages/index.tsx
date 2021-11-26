@@ -2,11 +2,12 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import profilePic from "../public/me.jpg";
+import yarnPic from "../public/yarn.png";
 
 export default function Home() {
   return (
     <>
-      <div className="md:px-14 md:py-14 p-7 bg-default">
+      <div className="page-spacing bg-default">
         <Head>
           <title>ETHERFOLIO</title>
           <link rel="icon" href="/favicon.ico" />
@@ -41,13 +42,13 @@ export default function Home() {
 
           <div className="hidden uppercase list-none md:inline-block ">
             <ul className="flex justify-between gap-2">
-              <li className="self-center px-2 py-3 font-bold text-green-700 border-l-2 border-r-2 border-green-700 cursor-pointer rounded-r-xl rounded-l-xl border-l-3 hover:text-black">
+              <li className="link-style">
                 <Link href="#services">Services</Link>
               </li>
-              <li className="self-center px-2 py-3 font-bold text-green-700 border-l-2 border-r-2 border-green-700 cursor-pointer rounded-r-xl rounded-l-xl border-l-3 hover:text-black">
+              <li className="link-style">
                 <Link href="#stack">Stack</Link>
               </li>
-              <li className="self-center px-2 py-3 font-bold text-green-700 border-l-2 border-r-2 border-green-700 cursor-pointer rounded-r-xl rounded-l-xl border-l-3 hover:text-black">
+              <li className="link-style">
                 <Link href="#work">WORKS</Link>
               </li>
             </ul>
@@ -111,7 +112,7 @@ export default function Home() {
             />
           </div>
           <div className="text-center mt-14 md:w-1/3">
-            <h2 className="text-xl font-thin text-black md:ml-7">
+            <h2 className="text-xl font-light text-black md:ml-7">
               Software Engineer from Nigeria.
               <span className="block">I SOLVE PROBLEMS</span>
             </h2>
@@ -127,7 +128,7 @@ export default function Home() {
       >
         <div className="w-full md:justify-end self-center-center md:w-1/2 sm:w-full">
           {/* Cards */}
-          <div className="flex items-center self-center w-full py-10 mb-5 rounded-md shadow sm:w-full md:px-16 md:py-12 px-7 md:w-full gap-x-3">
+          <div className="blog-card">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +146,7 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <div className="font-bold tracking-wide text-hi">
+              <div className="blog-card-title">
                 Mobile Application Development
               </div>
               <div className="font-medium text-hi">6 Projects</div>
@@ -153,7 +154,7 @@ export default function Home() {
           </div>
 
           {/* Cards */}
-          <div className="flex items-center self-center w-full py-10 mb-5 rounded-md shadow sm:w-full md:px-16 md:py-12 px-7 md:w-full gap-x-3">
+          <div className="blog-card">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -171,15 +172,13 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <div className="font-bold tracking-wide text-hi">
-                Backend Development
-              </div>
+              <div className="blog-card-title">Backend Development</div>
               <div className="font-medium text-hi">10 Projects</div>
             </div>
           </div>
 
           {/* Cards */}
-          <div className="flex items-center self-center w-full py-10 mb-5 rounded-md shadow sm:w-full md:px-16 md:py-12 px-7 md:w-full gap-x-3">
+          <div className="blog-card">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -197,9 +196,7 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <div className="font-bold tracking-wide text-hi">
-                Website Development
-              </div>
+              <div className="blog-card-title">Website Development</div>
               <div className="font-medium text-hi">10 Projects</div>
             </div>
           </div>
@@ -226,24 +223,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="stack" className="bg-default md:px-14 md:py-14 p-7">
+      <div id="stack" className="bg-default page-spacing">
         <h1 className="mb-6 text-4xl text-center font-hi">My Tech Stack</h1>
 
         <div className="flex flex-col items-center text-3xl md:flex-row md:gap-x-4">
           <div className="container content-center w-full p-4 mb-5 bg-white rounded-lg shadow-md font-title">
-            <h3 className="mb-4 text-2xl font-bold text-center font-hi">
-              App Dev
-            </h3>
+            <h3 className="stack-head">App Dev</h3>
             <ul>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
+              <li className="stack-title">
                 <div className="w-3 h-3 bg-red-700 rounded-full"></div>
                 React Native
               </li>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
+              <li className="stack-title">
                 <div className="w-3 h-3 bg-red-700 rounded-full"></div>
                 Redux
               </li>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
+              <li className="stack-title">
                 <div className="w-3 h-3 bg-red-700 rounded-full"></div>
                 Typescript / Javascript
               </li>
@@ -251,69 +246,67 @@ export default function Home() {
           </div>
 
           <div className="container content-center w-full p-4 mb-5 bg-white rounded-lg shadow-lg font-title">
-            <h3 className="mb-4 text-2xl font-bold text-center font-hi">
-              Back End Dev
-            </h3>
+            <h3 className="stack-head">Back End Dev</h3>
             <ul>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 Node
               </li>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 Typescript / Javascript
               </li>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 Postgres / MongoDB
               </li>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 TypeOrm / Sequelize
               </li>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 Nestjs(Express) / Normal Express
               </li>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 Firebase
               </li>
 
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 Heroku / Vercel / CircleCi / Jest
               </li>
             </ul>
           </div>
 
           <div className="container content-center w-full p-4 bg-white rounded-lg shadow-md font-title">
-            <h3 className="mb-4 text-2xl font-bold text-center font-hi">
-              Web Dev
-            </h3>
+            <h3 className="stack-head">Web Dev</h3>
             <ul>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 React
               </li>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 Redux
               </li>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 Typescript / Javascript
               </li>
-              <li className="flex items-center mb-4 ml-5 gap-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <li className="stack-title">
+                <div className="stack-circle"></div>
                 Nextjs
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div className="bg-white md:px-14 md:py-14 p-7">
-        <h1 className="text-4xl text-center font-hi">Projects & Tools</h1>
+      <div className="bg-white page-spacing">
+        <h1 className="text-4xl text-center font-hi">
+          Languages, Tools & Projects
+        </h1>
 
         <div className="flex flex-wrap justify-center my-5 gap-x-3 gap-y-1">
           <h1 className="px-3 py-2 font-bold text-white bg-green-600 rounded-md">
@@ -326,15 +319,61 @@ export default function Home() {
             Python
           </h1>
           <h1 className="px-3 py-2 font-bold text-white bg-green-600 rounded-md">
-            Golang
+            Web3 and Solidity
           </h1>
 
           <h1 className="px-3 py-2 font-bold text-white bg-green-600 rounded-md">
             Git and GitHub
           </h1>
+
+          <h1 className="px-3 py-2 font-bold text-white bg-green-600 rounded-md">
+            Learn The next Best Thing
+          </h1>
         </div>
 
-        <div className="container mt-5"></div>
+        <div className="flex flex-wrap">
+          <div className="w-full p-5 mt-5 shadow-lg md:w-1/3">
+            <h2 className="text-2xl text-black uppercase font-hi">Yarn</h2>
+            <p className="font-medium">
+              A twitter clone app using react and firebase
+            </p>
+            <a
+              href="https://yarn-b9e31.web.app/"
+              target="_blank"
+              className="font-bold text-blue-900"
+            >
+              Yarn Site
+            </a>
+          </div>
+
+          <div className="w-full p-5 mt-5 shadow-lg md:w-1/3">
+            <h2 className="text-2xl text-black uppercase font-hi">
+              Social Balad
+            </h2>
+            <p className="font-medium">
+              A Social media platform with node, MongoDB and React
+            </p>
+            <a
+              href="https://socialbalad.netlify.app/"
+              target="_blank"
+              className="font-bold text-blue-900"
+            >
+              Balad
+            </a>
+          </div>
+
+          <div className="w-full p-5 mt-5 shadow-lg md:w-1/3">
+            <h2 className="text-2xl text-black uppercase font-hi">Yarn</h2>
+            <p className="font-medium">
+              An Income expense fintech application that allow users manage
+              funds through the app and make several transactions on the
+              application.
+            </p>
+            <a href="#" target="_blank" className="font-bold text-blue-900">
+              Onguard
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );
