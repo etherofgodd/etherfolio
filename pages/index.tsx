@@ -2,11 +2,14 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import profilePic from "../public/me.jpg";
-import yarnPic from "../public/yarn.png";
+import { Disclosure } from "@headlessui/react";
+import { ChevronUpIcon } from "@heroicons/react/solid";
+import DisclosureComponent from "../components/Disclosure";
 
 export default function Home() {
   return (
     <>
+      {/* Header */}
       <div className="page-spacing bg-default">
         <Head>
           <title>ETHERFOLIO</title>
@@ -364,8 +367,113 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-56 h-56 pattern-isometric pattern-indigo-600 pattern-bg-transparent pattern-opacity-60 pattern-size-8">
-        hello world
+
+      <div className="flex flex-col w-full md:flex-row page-spacing bg-default">
+        <div className="w-full px-4 py-2 bg-white rounded-lg md:w-1/2 ustify-center ">
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex items-center justify-between w-full px-4 py-2 text-lg font-medium text-left rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-300 focus-visible:ring-opacity-75">
+                  <span className="m-5 font-extrabold font-hi">
+                    Why am i the ideal candidate?
+                  </span>
+                  <ChevronUpIcon
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-5 h-5 text-purple-500`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className="m-5 text-sm text-justify text-gray-500 font-hi">
+                  You get a hard working individual with expertise in
+                  collaborating with teams and individuals. Also, you get a
+                  smart programmer with a computer science background with the
+                  ability to write performance oriented code taking into
+                  consideration time and space complexity.
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex items-center justify-between w-full px-4 py-2 text-lg font-medium text-left rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-300 focus-visible:ring-opacity-75">
+                  <span className="m-5 font-extrabold font-hi">
+                    Front-end Developer?
+                  </span>
+                  <ChevronUpIcon
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-5 h-5 text-purple-500`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className="m-5 text-sm text-justify text-gray-500 font-hi">
+                  I can be your front-end developer, having experience using
+                  multiple javascript frameworks like React and Nextjs. Using
+                  these tools with extra libraries like redux, react query,
+                  redux toolkit, react-router. And CSS framework like Tailwind
+                  css. For moblie applications, I use React native. Using
+                  libraries like react-navigation, redux, context api, realm,
+                  async-storage, etc.
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex items-center justify-between w-full px-4 py-2 text-lg font-medium text-left rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-300 focus-visible:ring-opacity-75">
+                  <span className="m-5 font-extrabold font-hi">
+                    Back-end Developer?
+                  </span>
+                  <ChevronUpIcon
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-5 h-5 text-purple-500`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className="m-5 text-sm text-justify text-gray-500 font-hi">
+                  I can be your back-end developer, I build Backend services
+                  with nodejs, i can use express to create servers and i also
+                  use nestjs. For my database technology, I use MongoDB and
+                  Postgresql, leveraging modelling packages like mongoose,
+                  typeorm and sequelize for the database design. Hosting on
+                  heroku, using amazon s3 bucket for saving images. I can also
+                  use firebase for hosting, using firestore as my database and
+                  using several firebase functions.
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex items-center justify-between w-full px-4 py-2 text-lg font-medium text-left rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-300 focus-visible:ring-opacity-75">
+                  <span className="m-5 font-extrabold font-hi">
+                    Other skills?
+                  </span>
+                  <ChevronUpIcon
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-5 h-5 text-purple-500`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className="m-5 text-sm text-justify text-gray-500 font-hi">
+                  Still at the early stage of my web3 developement, having used
+                  web3 and nextjs for my final year project.
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+        </div>
+
+        <div className="w-full md:w-1/2">
+          <h1 className="text-xl font-extrabold text-center font-hi">
+            Contact me
+          </h1>
+        </div>
       </div>
     </>
   );
