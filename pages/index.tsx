@@ -107,7 +107,7 @@ export default function Home() {
               alt="baby boy"
               layout="fill"
               objectFit="cover"
-              className="absolute object-center rounded-full left-8 md:rounded-full"
+              className="object-center rounded-3xl left-8 md:rounded-2xl"
               placeholder="blur" // Optional blur-up while loading
             />
           </div>
@@ -303,38 +303,29 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="bg-white page-spacing">
         <h1 className="text-4xl text-center font-hi">
           Languages, Tools & Projects
         </h1>
 
         <div className="flex flex-wrap justify-center my-5 gap-x-3 gap-y-1">
-          <h1 className="px-3 py-2 font-bold text-white bg-green-600 rounded-md">
-            Typescript
-          </h1>
-          <h1 className="px-3 py-2 font-bold text-white bg-green-600 rounded-md">
-            Javascript
-          </h1>
-          <h1 className="px-3 py-2 font-bold text-white bg-green-600 rounded-md">
-            Python
-          </h1>
-          <h1 className="px-3 py-2 font-bold text-white bg-green-600 rounded-md">
-            Web3 and Solidity
-          </h1>
+          <h1 className="lang-tile">Typescript</h1>
+          <h1 className="lang-tile">Javascript</h1>
+          <h1 className="lang-tile">Python</h1>
+          <h1 className="lang-tile">Web3 and Solidity</h1>
 
-          <h1 className="px-3 py-2 font-bold text-white bg-green-600 rounded-md">
-            Git and GitHub
-          </h1>
+          <h1 className="lang-tile">Git and GitHub</h1>
 
-          <h1 className="px-3 py-2 font-bold text-white bg-green-600 rounded-md">
-            Learn The next Best Thing
-          </h1>
+          <h1 className="lang-tile">Learn The next Best Thing</h1>
         </div>
 
         <div className="flex flex-wrap">
           <div className="w-full p-5 mt-5 shadow-lg md:w-1/3">
-            <h2 className="text-2xl text-black uppercase font-hi">Yarn</h2>
-            <p className="font-medium">
+            <h2 className="font-sans text-2xl font-bold text-black uppercase">
+              Yarn
+            </h2>
+            <p className="font-bold ">
               A twitter clone app using react and firebase
             </p>
             <a
@@ -348,11 +339,9 @@ export default function Home() {
 
           <div className="w-full p-5 mt-5 shadow-lg md:w-1/3">
             <h2 className="text-2xl text-black uppercase font-hi">
-              Social Balad
+              Ether's Space
             </h2>
-            <p className="font-medium">
-              A Social media platform with node, MongoDB and React
-            </p>
+            <p className="font-medium">A Bloging application</p>
             <a
               href="https://socialbalad.netlify.app/"
               target="_blank"
@@ -363,7 +352,7 @@ export default function Home() {
           </div>
 
           <div className="w-full p-5 mt-5 shadow-lg md:w-1/3">
-            <h2 className="text-2xl text-black uppercase font-hi">Yarn</h2>
+            <h2 className="text-2xl text-black uppercase font-hi">Onguard</h2>
             <p className="font-medium">
               An Income expense fintech application that allow users manage
               funds through the app and make several transactions on the
@@ -374,6 +363,9 @@ export default function Home() {
             </a>
           </div>
         </div>
+      </div>
+      <div className="w-56 h-56 pattern-isometric pattern-indigo-600 pattern-bg-transparent pattern-opacity-60 pattern-size-8">
+        hello world
       </div>
     </>
   );
