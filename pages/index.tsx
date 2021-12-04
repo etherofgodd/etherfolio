@@ -4,7 +4,6 @@ import Image from "next/image";
 import profilePic from "../public/me.jpg";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/solid";
-import DisclosureComponent from "../components/Disclosure";
 
 export default function Home() {
   return (
