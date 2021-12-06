@@ -469,9 +469,71 @@ export default function Home() {
         </div>
 
         <div className="w-full md:w-1/2">
-          <h1 className="text-xl font-extrabold text-center font-hi">
+          <h1 className="m-6 text-xl font-extrabold text-center font-hi">
             Contact me
           </h1>
+
+          <div className="flex flex-col justify-center ml-5">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className="w-full p-5 mb-4 border rounded-md bg-gray-50"
+              placeholder="What is your name?"
+            />
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="w-full p-5 mb-4 border rounded-md bg-gray-50"
+              placeholder="What is your email?"
+            />
+
+            <textarea
+              name="message"
+              id="message"
+              cols={30}
+              rows={10}
+              placeholder="hey there 😆"
+              className="p-10 border rounded-md bg-gray-50"
+            ></textarea>
+
+            <button
+              type="submit"
+              className="self-center px-2 py-3 mt-5 font-bold text-white uppercase align-middle bg-blue-700 rounded-lg shadow-lg font-hi"
+              onClick={(e) => e.preventDefault()}
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+
+      <div className="flex flex-col items-center justify-between py-8 border-t-2 border-gray-500 gap-y-4 md:flex-row px-7 font-hi">
+        <div className="py-2 mx-3 border-r-2 border-black">
+          <h1 className="mr-3 text-3xl italic font-bold tracking-wide text-black md:text-5xl font-title ">
+            <Link href="#home">etherfolio</Link>
+          </h1>
+        </div>
+        <div>© 2021. All rights reserved</div>
+        <div>
+          Inspired by{"   "}
+          <span className="text-red-500">
+            <Link href="https://dribbble.com/shots/16831903/attachments/11890108?mode=media">
+              Sajon
+            </Link>
+          </span>
+        </div>
+        <div>
+          Designed by{"   "}
+          <span className="text-red-500">
+            <Link href="https://dribbble.com/shots/16831903/attachments/11890108?mode=media">
+              Me
+            </Link>
+          </span>
         </div>
       </div>
     </>
